@@ -243,4 +243,16 @@
 //   const normalizedInput = input.toLowerCase(); // Change this line
 
 //   return normalizedInput;
-// }
+// }  
+
+// 36 задача
+
+// function checkForSpam(message) {
+//     let result;
+//     // Change code below this line
+//     message = message.toLowerCase();
+//   result = message.includes('spam') || message.includes('sale') ? true: false; {
+      
+//     // Change code above this line
+//     return result;
+//   }
