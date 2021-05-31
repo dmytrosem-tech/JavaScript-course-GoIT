@@ -256,8 +256,3 @@
 //     // Change code above this line
 //     return result;
 //   }
-
-for (let i = 0; i >= 10; i += 1) {
-  console.log("hi man", i);
-}
-console.log("hi");
