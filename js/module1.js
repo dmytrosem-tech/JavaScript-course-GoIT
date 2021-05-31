@@ -243,7 +243,7 @@
 //   const normalizedInput = input.toLowerCase(); // Change this line
 
 //   return normalizedInput;
-// }  
+// }
 
 // 36 задача
 
@@ -252,7 +252,12 @@
 //     // Change code below this line
 //     message = message.toLowerCase();
 //   result = message.includes('spam') || message.includes('sale') ? true: false; {
-      
+
 //     // Change code above this line
 //     return result;
 //   }
+
+for (let i = 0; i >= 10; i += 1) {
+  console.log("hi man", i);
+}
+console.log("hi");
