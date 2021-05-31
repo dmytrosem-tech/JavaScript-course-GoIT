@@ -117,15 +117,44 @@
 // }
 
 // 13 task
+// function slugify(title) {
+//   // Change code below this line
+//   const slug = title.toLowerCase().split(' ').join('-');
+//   return slug;
+//   // Change code above this line
+// }
 
-function slugify(title) {
-  //   title = title.toLowerCase();
-  title = slugify(title);
-  console.log(title);
-  return title;
-  //   return title
-  //     .toLowerCase()
-  //     .replace(/[^\w ]+/g, '')
-  //     .replace(/ +/g, '-');
+// 14 task 
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+// // Change code below this line
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, fruits.length - 1);
+// const lastThreeEls = fruits.slice(fruits.length - 3, fruits.length - 0);
+// console.log(firstTwoEls);
+// console.log(nonExtremeEls);
+// console.log(lastThreeEls);
+
+// 15 task
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+// const allClients = oldClients.concat(newClients); // Change this line
+
+
+// 16 task
+
+function makeArray(firstArray, secondArray, maxLength) {
+  // Change code below this line
+ const totalArray = firstArray.concat(secondArray);
+ 
+if (totalArray <= maxLength) {
+  totalArray.length = maxLength;
+} else {
+  totalArray.length = totalArray;
 }
-slugify('Arrays for begginers');
+console.log(totalArray);
+
+
+  // Change code above this line
+}
+
+makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)
