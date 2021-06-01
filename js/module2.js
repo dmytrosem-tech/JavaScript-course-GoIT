@@ -124,7 +124,7 @@
 //   // Change code above this line
 // }
 
-// 14 task 
+// 14 task
 // const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
 // // Change code below this line
 // const firstTwoEls = fruits.slice(0, 2);
@@ -139,22 +139,62 @@
 // const newClients = ['Peach', 'Houston'];
 // const allClients = oldClients.concat(newClients); // Change this line
 
-
 // 16 task
 
-function makeArray(firstArray, secondArray, maxLength) {
-  // Change code below this line
- const totalArray = firstArray.concat(secondArray);
- 
-if (totalArray <= maxLength) {
-  totalArray.length = maxLength;
-} else {
-  totalArray.length = totalArray;
-}
-console.log(totalArray);
+// function makeArray(firstArray, secondArray, maxLength) {
+//   // Change code below this line
+//   const totalArray = firstArray.concat(secondArray);
+
+//   if (totalArray.length <= maxLength) {
+//     return totalArray;
+//   } else if (totalArray.length > maxLength) {
+//     return totalArray.slice(0, maxLength);
+//   }
+//   // Change code above this line
+// }
+
+// 17 task 
+
+// const start = 3;
+// const end = 7;
+
+// for (let i = start; i <= end; i += 1) { // Change this line
+//   console.log(i);
+// }
 
 
-  // Change code above this line
-}
+// 19 task 
 
-makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+// for (let i = 0; i < fruits.length; i += 1) { // Change this line
+//   const fruit = fruits[i]; // Change this line
+//   console.log(fruit);
+// }
+
+// 20 task 
+
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//     // Change code below this line
+//     for (let i = 0; i < order.length; i += 1) {
+//       total += order[i];
+//     }
+//     // Change code above this line
+//     return total;
+//   }
+
+// 21 task 
+
+// function findLongestWord(string) {
+//     // Change code below this line
+//   let words = string.split(' ')
+//   console.log(words);
+//   let longest = 0;
+//   for (let i = 0; i < words.length - 1; i += 1)
+
+//     // Change code above this line
+//   }
+//   findLongestWord("The quick brown fox jumped over the lazy dog")
+
+
