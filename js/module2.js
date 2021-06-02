@@ -219,3 +219,23 @@
 //   // Change code above this line
 // }
 // filterArray([1, 2, 3, 4, 5], 3);
+
+// // 24 task
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+//   return fruits.includes(fruit); // Change this line
+// }
+
+// 25 task
+// function getCommonElements(array1, array2) {
+//     const newArr = [];
+//     for (let i = 0; i < array1.length; i += 1) {
+//       if (array2.includes(array1[i])) {
+//         newArr.push(array1[i]);
+//       }
+//     }
+//     return newArr;
+//   }
+// getCommonElements([1, 2, 3], [2, 4]);
+// getCommonElements([1, 2, 3, 6, 8], [2, 1, 17, 19, 5, 9, 8]);
