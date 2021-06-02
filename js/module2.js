@@ -140,11 +140,9 @@
 // const allClients = oldClients.concat(newClients); // Change this line
 
 // 16 task
-
 // function makeArray(firstArray, secondArray, maxLength) {
 //   // Change code below this line
 //   const totalArray = firstArray.concat(secondArray);
-
 //   if (totalArray.length <= maxLength) {
 //     return totalArray;
 //   } else if (totalArray.length > maxLength) {
@@ -153,27 +151,21 @@
 //   // Change code above this line
 // }
 
-// 17 task 
-
+// 17 task
 // const start = 3;
 // const end = 7;
-
 // for (let i = start; i <= end; i += 1) { // Change this line
 //   console.log(i);
 // }
 
-
-// 19 task 
-
+// 19 task
 // const fruits = ['apple', 'plum', 'pear', 'orange'];
-
 // for (let i = 0; i < fruits.length; i += 1) { // Change this line
 //   const fruit = fruits[i]; // Change this line
 //   console.log(fruit);
 // }
 
-// 20 task 
-
+// 20 task
 // function calculateTotalPrice(order) {
 //     let total = 0;
 //     // Change code below this line
@@ -184,17 +176,46 @@
 //     return total;
 //   }
 
-// 21 task 
-
+// 21 task
 // function findLongestWord(string) {
-//     // Change code below this line
-//   let words = string.split(' ')
-//   console.log(words);
-//   let longest = 0;
-//   for (let i = 0; i < words.length - 1; i += 1)
-
-//     // Change code above this line
+//   let strSplit = string.split(' ');
+//   let longestWord = [0];
+//   for (let i = 0; i < strSplit.length; i += 1) {
+//     if (strSplit[i].length > longestWord) {
+//       longestWord = strSplit[i];
+//     }
 //   }
-//   findLongestWord("The quick brown fox jumped over the lazy dog")
+//   console.log(strSplit[4].length);
+//   console.log(longestWord);
+//   return longestWord;
+// }
+// findLongestWord('The quick brown fox jumped over the lazy dog');
+//
 
+// 22 task
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+//   console.log(numbers);
+//   return numbers;
+// }
+// createArrayOfNumbers(1, 3);
 
+// 23 task
+
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   const newArr = [];
+//   for (let i = 0; i <= numbers.length; i += 1) {
+//     if (numbers[i] > value) {
+//       newArr.push(numbers[i]);
+//     }
+//   }
+//   console.log(numbers[4]);
+//   console.log(newArr);
+//   return newArr;
+//   // Change code above this line
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
