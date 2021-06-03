@@ -312,10 +312,18 @@
 
 // 32 task
 // function includes(array, value) {
-//     // Change code below this line
+//   // Change code below this line
 //   for (let object of array) {
-//     if (object === value) { return true; }
-//     // Change code above this line
+//     if (object === value) {
+//       return true;
+//     }
 //   }
-  
-// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") 
+//   for (let object of array) {
+//     if (object !== value) {
+//       return false;
+//     }
+//   }
+//   // Change code above this line
+// }
+
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter")
