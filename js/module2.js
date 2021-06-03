@@ -239,3 +239,83 @@
 //   }
 // getCommonElements([1, 2, 3], [2, 4]);
 // getCommonElements([1, 2, 3, 6, 8], [2, 1, 17, 19, 5, 9, 8]);
+
+// 26 task
+// function calculateTotalPrice(order) {
+//     let total = 0;
+//     // Change code below this line
+
+//     for (const number of order) {
+//       total += number;
+//     }
+
+//     // Change code above this line
+//     return total;
+//   }
+
+// 27 task
+// function filterArray(numbers, value) {
+//     // Change code below this line
+//     const filteredNumbers = [];
+//     for (const number of numbers) {
+//       if (number > value) {
+//         filteredNumbers.push(number);
+//       }
+//     }
+//     return filteredNumbers;
+//     // Change code above this line
+//   }
+
+// 28 task
+// const a = 3 % 3;
+// const b = 4 % 3;
+// const c = 11 % 4;
+// const d = 12 % 7;
+// const e = 8 % 3;
+
+// 29 task
+// function getEvenNumbers(start, end) {
+//   // Change code below this line
+//   let newArr = [];
+//   for (let i = start; i <= end; i += 1) {
+//     if (i % 2 === 0) {
+//       newArr.push(i);
+//     }
+//   }
+//   return newArr;
+//   // Change code above this line
+// }
+
+// 30 task
+// const start = 6;
+// const end = 27;
+// let number;
+// for (let i = start; i < end; i += 1) {
+//   if (i % 5 === 0) {
+//     number = i;
+//     break;
+//   }
+// }
+
+// 31 task
+// function findNumber(start, end, divisor) {
+//     // Change code below this line
+//     let number;
+//     for (let i = start; i < end; i += 1) {
+//       if (i % divisor === 0) {
+//         number = i;
+//          return number;
+//       }
+//     }
+//     // Change code above this line
+//   }
+
+// 32 task
+// function includes(array, value) {
+//     // Change code below this line
+//   for (let object of array) {
+//     if (object === value) { return true; }
+//     // Change code above this line
+//   }
+  
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter") 
