@@ -52,9 +52,10 @@
 
 // 9 task
 // function getExtremeElements(planets) {
-//   const deletedPlanets = planets.splice(1, planets.length - 2);
-//   console.log(deletedPlanets);
-//   console.log(planets);
+// //   console.log(planets);
+//     const deletedPlanets = planets.splice(1, planets.length - 2);
+//     console.log(deletedPlanets);
+//     console.log(planets);
 // }
 // getExtremeElements([
 //   'Earth',
