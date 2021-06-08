@@ -421,4 +421,80 @@
 //   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
 // }
 
-// 27 task
+// // 27 task
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Change code below this line
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+
+// // 28 task
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Change code below this line
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// // 29 task
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Change code below this line
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+// // 30 task
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'General';
+//   const priority = 'Normal';
+//   // Change code below this line
+//   const task = {
+//     category,
+//     priority,
+//     completed,
+//   };
+//   const newData = { ...task, ...data };
+//   return newData;
+//   // Change code above this line
+// }
+// makeTask({ category: 'Finance', text: 'Take interest' });
+
+// // 31 task
+// function add(...args) {
+//   let argsSumm = 0;
+//   for (let arg of args) {
+//     argsSumm += arg;
+//   }
+//   console.log(argsSumm);
+//   return argsSumm;
+//   // Change code above this line
+// }
+// add(12, 4, 11, 48);
+
+// // 32 task
+// function addOverNum(firstNumber, ...args) {
+//     let total = 0;
+//   for (const arg of args) {
+//     if (arg > firstNumber) {
+//       total += arg;
+//     }
+//   }
+//   return total;
+//   // Change code above this line
+// }
+
+// 33 task
