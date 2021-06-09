@@ -474,8 +474,8 @@
 // makeTask({ category: 'Finance', text: 'Take interest' });
 
 // // 31 task
+// let argsSumm = 0;
 // function add(...args) {
-//   let argsSumm = 0;
 //   for (let arg of args) {
 //     argsSumm += arg;
 //   }
