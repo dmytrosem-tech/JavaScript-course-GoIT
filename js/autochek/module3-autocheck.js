@@ -601,38 +601,54 @@ const atTheOldToad = {
     { name: 'Stone skin', price: 520 },
   ],
   // Change code below this line
-  //   getPotions() {
-  //     return this.potions;
-  //   },
-  //   addPotion(potionName) {
-  //     if (this.potions.includes(potionName)) {
-  //       return `Potion ${potionName} is already equipped!`;
-  //     }
-
-  //     this.potions.push(potionName);
-  //   },
-  removePotion(potionName) {
-    for (let potion of this.potions) {
-      //   console.log(potion);
-      potionName = potion;
-      console.log(potionName);
-      const potionIndex = this.potions.indexOf(potionName);
-      console.log(potionIndex);
-    }
-    if (potionIndex === -1) {
-      return `Potion ${potionName} is not in inventory!`;
-    }
-    this.potions.splice(potionIndex, 1);
+  getPotions() {
+    return this.potions;
   },
-  //   updatePotionName(oldName, newName) {
-  //     const potionIndex = this.potions.indexOf(oldName);
+  addPotion(potionName) {
+    console.log(potionName);
+    console.log(this.potions);
+    for (let i = 0; i < this.potions.length; i += 1) {
+      console.log(i);
+      if (this.potions[i] === potionName) {
+        return `Potion ${potionName} is already equipped!`;
+      }
+      this.potions.push(potionName);
+    }
+    return this.potions;
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      // console.log(i);
+      // ------- Где [i] это индекс объекта в массиве!!!
 
-  //     if (potionIndex === -1) {
-  //       return `Potion ${oldName} is not in inventory!`;
-  //     }
+      if (this.potions[i].name === potionName) {
+        // console.log(this.potions[0]);
+        // console.log(this.potions[1]);
+        // console.log(this.potions[2]);
 
-  //     this.potions.splice(potionIndex, 1, newName);
-  //   },
+        // Тут мы ножом вырезаем из массива объект начиная с того индекса [i] который будет у объекта с нужным именем - (this.potions[i].name)
+        this.potions.splice([i], 1);
+
+        return this.potions;
+      }
+    }
+    return `Potion ${potionName} is not in inventory!`;
+  },
+  updatePotionName(oldName, newName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      if (this.potions[i].name === -1) {
+        return `Potion ${oldName} is not in inventory!`;
+      }
+      this.potions.splice(this.potions[i], 1, newName);
+    }
+    return this.potions;
+  },
   // Change code above this line
 };
-console.log(atTheOldToad.removePotion('Dragon breath'));
+
+// console.log(atTheOldToad.addPotion({ name: 'Power potion', price: 270 }));
+// console.log(atTheOldToad.addPotion({ name: 'Speed potion', price: 460 }));
+// console.log(atTheOldToad.removePotion('Dragon breath'));
+// console.log(atTheOldToad.removePotion('torba potion'));
+console.log(atTheOldToad.updatePotionName('Dragon breath', 'Polymorth'));
+// console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"));
