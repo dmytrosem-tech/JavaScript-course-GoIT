@@ -131,3 +131,169 @@
 //   total += value;
 // }
 // console.log(total);
+
+// //  ЗАДАЧА ПРО БАНК ОТ ВОВЫ  =======>
+
+// // 5) Напиши скрипт управления личным кабинетом интернет банка.
+// // Есть объект account в котором необходимо реализовать методы для работы с балансом и историей транзакций.
+// /*
+//  * Типов транзацкий всего два.
+//  * Можно положить либо снять деньги со счета.
+//  */
+// const Transaction = {
+//   DEPOSIT: 'deposit',
+//   WITHDRAW: 'withdraw',
+// };
+
+// const account = {
+//   balance: 0,
+
+//   transactions: [],
+
+//   createTransaction(amount, type) {
+//     return {
+//       id: this.transactions.length,
+//       amount,
+//       type,
+//     };
+//   },
+
+//   deposit(amount) {
+//     this.balance += amount;
+//     const transaction = this.createTransaction(amount, Transaction.DEPOSIT);
+//     this.transactions.push(transaction);
+//   },
+
+//   withdraw(amount) {
+//     this.balance -= amount;
+//     const transaction = this.createTransaction(amount, Transaction.WITHDRAW);
+//     this.transactions.push(transaction);
+//   },
+
+//   getBalance() {
+//     return this.balance;
+//   },
+
+//   getTransactionDetails(id) {
+//     for (let transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
+//     return 'Transaction Not Exist';
+//   },
+
+//   getTransactionTotal(type) {
+//     const filteredTransactions = [];
+//     let total = 0;
+//     for (let transaction of this.transactions) {
+//       if (transaction.type === type) {
+//         filteredTransactions.push(transaction);
+//       }
+//     }
+
+//     for (let transaction of filteredTransactions) {
+//       total += transaction.amount;
+//     }
+//     return total;
+//   },
+// };
+
+// // console.log(`account`, account);
+// // console.log("result", account.createTransaction(100, Transaction.DEPOSIT));
+// account.deposit(100);
+// account.deposit(115);
+// account.withdraw(50);
+// console.log(account.getTransactionDetails(10));
+// console.log('balance', account.getBalance());
+// console.log(`history`, account.transactions);
+// console.log(`filter`, account.getTransactionTotal(Transaction.WITHDRAW));
+
+//  Моя задача про садик  ==========>
+
+const typeOfEvent = {
+  ADMISSION: 'admission',
+  GRADUATION: 'graduation',
+};
+
+const kindergarden = {
+  // количество детей в садике
+  childsCount: 0,
+
+  // список детей
+  childsCirculationList: [],
+
+  // карточка поступившего ребенка
+  createChildCart(childName, age, typeOfEvent) {
+    return {
+      id: this.childsCirculationList.length,
+      childName,
+      age,
+      typeOfEvent,
+    };
+  },
+
+  // Поступления голопузого :)
+  admission(amount, childName, age) {
+    this.childsCount += amount;
+    const transaction = this.createChildCart(
+      childName,
+      age,
+      typeOfEvent.ADMISSION,
+    );
+    this.childsCirculationList.push(transaction);
+  },
+
+  //   Отчисление/выпуск из садика.
+  graduation(amount, childName, age) {
+    this.childsCount -= amount;
+    const transaction = this.createChildCart(
+      childName,
+      age,
+      typeOfEvent.GRADUATION,
+    );
+    this.childsCirculationList.push(transaction);
+  },
+
+  //  Получаем количество детей в садике.
+  getChildsCount() {
+    return this.childsCount;
+  },
+
+  // Получаем детали события в садике (поступление/выпуск).
+  getChildCirculationDetai(id) {
+    for (let event of this.childsCirculationList) {
+      if (event.id === id) {
+        return event;
+      }
+    }
+    return 'event is undefined';
+  },
+
+  // Сортируем события по типу (поступление/выпуск).
+  getEventsByType(typeOfEvent) {
+    const eventByType = [];
+
+    for (let event of this.childsCirculationList) {
+      if (event.typeOfEvent === typeOfEvent) {
+        eventByType.push(event);
+      }
+    }
+    return eventByType;
+  },
+};
+
+kindergarden.admission(1, 'Liza Princess', 3);
+kindergarden.admission(2, ['Vovan Bobov', 'Kolyan Bobov'], [3, 4]);
+kindergarden.admission(1, 'Tolik Ivanko', 5);
+kindergarden.graduation(1, 'Tolik Ivanko', 6);
+
+// console.log(kindergarden);
+console.log('childrens quantity:', kindergarden.getChildsCount());
+console.log(kindergarden.getChildCirculationDetai(2));
+console.log(kindergarden.getChildCirculationDetai(10));
+console.log('childrens circulation:', kindergarden.childsCirculationList);
+console.log(
+  'filter by type of event:',
+  kindergarden.getEventsByType(typeOfEvent.ADMISSION),
+);
