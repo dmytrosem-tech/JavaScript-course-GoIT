@@ -211,89 +211,194 @@
 
 //  Моя задача про садик  ==========>
 
-const typeOfEvent = {
-  ADMISSION: 'admission',
-  GRADUATION: 'graduation',
-};
+// const typeOfEvent = {
+//   ADMISSION: 'admission',
+//   GRADUATION: 'graduation',
+// };
 
-const kindergarden = {
-  // количество детей в садике
-  childsCount: 0,
+// const kindergarden = {
+//   // количество детей в садике
+//   childsCount: 0,
 
-  // список детей
-  childsCirculationList: [],
+//   // список детей
+//   childsCirculationList: [],
 
-  // карточка поступившего ребенка
-  createChildCart(childName, age, typeOfEvent) {
-    return {
-      id: this.childsCirculationList.length,
-      childName,
-      age,
-      typeOfEvent,
-    };
-  },
+//   // карточка поступившего ребенка
+//   createChildCart(childName, age, typeOfEvent) {
+//     return {
+//       id: this.childsCirculationList.length,
+//       childName,
+//       age,
+//       typeOfEvent,
+//     };
+//   },
 
-  // Поступления голопузого :)
-  admission(amount, childName, age) {
-    this.childsCount += amount;
-    const transaction = this.createChildCart(
-      childName,
-      age,
-      typeOfEvent.ADMISSION,
-    );
-    this.childsCirculationList.push(transaction);
-  },
+//   // Поступления голопузого :)
+//   admission(amount, childName, age) {
+//     this.childsCount += amount;
+//     const transaction = this.createChildCart(
+//       childName,
+//       age,
+//       typeOfEvent.ADMISSION,
+//     );
+//     this.childsCirculationList.push(transaction);
+//   },
 
-  //   Отчисление/выпуск из садика.
-  graduation(amount, childName, age) {
-    this.childsCount -= amount;
-    const transaction = this.createChildCart(
-      childName,
-      age,
-      typeOfEvent.GRADUATION,
-    );
-    this.childsCirculationList.push(transaction);
-  },
+//   //   Отчисление/выпуск из садика.
+//   graduation(amount, childName, age) {
+//     this.childsCount -= amount;
+//     const transaction = this.createChildCart(
+//       childName,
+//       age,
+//       typeOfEvent.GRADUATION,
+//     );
+//     this.childsCirculationList.push(transaction);
+//   },
 
-  //  Получаем количество детей в садике.
-  getChildsCount() {
-    return this.childsCount;
-  },
+//   //  Получаем количество детей в садике.
+//   getChildsCount() {
+//     return this.childsCount;
+//   },
 
-  // Получаем детали события в садике (поступление/выпуск).
-  getChildCirculationDetai(id) {
-    for (let event of this.childsCirculationList) {
-      if (event.id === id) {
-        return event;
-      }
-    }
-    return 'event is undefined';
-  },
+//   // Получаем детали события в садике (поступление/выпуск).
+//   getChildCirculationDetai(id) {
+//     for (let event of this.childsCirculationList) {
+//       if (event.id === id) {
+//         return event;
+//       }
+//     }
+//     return 'event is undefined';
+//   },
 
-  // Сортируем события по типу (поступление/выпуск).
-  getEventsByType(typeOfEvent) {
-    const eventByType = [];
+//   // Сортируем события по типу (поступление/выпуск).
+//   getEventsByType(typeOfEvent) {
+//     const eventByType = [];
 
-    for (let event of this.childsCirculationList) {
-      if (event.typeOfEvent === typeOfEvent) {
-        eventByType.push(event);
-      }
-    }
-    return eventByType;
-  },
-};
+//     for (let event of this.childsCirculationList) {
+//       if (event.typeOfEvent === typeOfEvent) {
+//         eventByType.push(event);
+//       }
+//     }
+//     return eventByType;
+//   },
+// };
 
-kindergarden.admission(1, 'Liza Princess', 3);
-kindergarden.admission(2, ['Vovan Bobov', 'Kolyan Bobov'], [3, 4]);
-kindergarden.admission(1, 'Tolik Ivanko', 5);
-kindergarden.graduation(1, 'Tolik Ivanko', 6);
+// kindergarden.admission(1, 'Liza Princess', 3);
+// kindergarden.admission(2, ['Vovan Bobov', 'Kolyan Bobov'], [3, 4]);
+// kindergarden.admission(1, 'Tolik Ivanko', 5);
+// kindergarden.graduation(1, 'Tolik Ivanko', 6);
 
-// console.log(kindergarden);
-console.log('childrens quantity:', kindergarden.getChildsCount());
-console.log(kindergarden.getChildCirculationDetai(2));
-console.log(kindergarden.getChildCirculationDetai(10));
-console.log('childrens circulation:', kindergarden.childsCirculationList);
-console.log(
-  'filter by type of event:',
-  kindergarden.getEventsByType(typeOfEvent.ADMISSION),
-);
+// // console.log(kindergarden);
+// console.log('childrens quantity:', kindergarden.getChildsCount());
+// console.log(kindergarden.getChildCirculationDetai(2));
+// console.log(kindergarden.getChildCirculationDetai(10));
+// console.log('childrens circulation:', kindergarden.childsCirculationList);
+// console.log(
+//   'filter by type of event:',
+//   kindergarden.getEventsByType(typeOfEvent.ADMISSION),
+// );
+
+// const pizzaPalace = {
+//   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+//   order(pizzaName, onSuccess, onError) {
+//     const pizzaInMenu = this.pizzas.includes(pizzaName);
+//     if (!pizzaInMenu) {
+//       onError(pizzaName);
+//       // console.log(onError(pizzaName));
+//       return;
+//     }
+//     onSuccess(pizzaName);
+
+//     // console.log(onSuccess(pizzaName));
+//   },
+// };
+
+// function makePizza(pizzaName) {
+//   return `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
+// }
+
+// function onOrderError(error) {
+//   return `Ошибка! ${error}`;
+// }
+// console.log(pizzaPalace.order('Аль Копчино', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Биг майк', makePizza, onOrderError));
+
+// function processCall(recipient, onAvailable, onNotAvailable) {
+//   // Имитируем доступеность абонента случайным числом
+//   const isRecipientAvailable = Math.random() > 0.5;
+
+//   if (!isRecipientAvailable) {
+//     onNotAvailable(recipient);
+//     return;
+//   }
+
+//   onAvailable(recipient);
+// }
+
+// function takeCall(name) {
+//   console.log(`Соединяем с ${name}, ожидайте...`);
+//   // Логика принятия звонка
+// }
+
+// function activateAnsweringMachine(name) {
+//   console.log(`Абонент ${name} недоступен, оставьте сообщение.`);
+//   // Логика активации автоответчика
+// }
+
+// function leaveHoloMessage(name) {
+//   console.log(`Абонент ${name} недоступен, записываем голограмму.`);
+//   // Логика записи голограммы
+// }
+
+// processCall('Манго', takeCall, activateAnsweringMachine);
+// processCall('Поли', takeCall, leaveHoloMessage);
+
+// const pizzaPalace = {
+//   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+//   order(pizzaName, onSuccess, onError) {
+//     for (let pizza of this.pizzas) {
+//       if (pizza === pizzaName) {
+//         return onSuccess, `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
+//       }
+//     }
+//     return `Ошибка! В ассортименте нет пиццы с названием ${pizzaName}.`;
+//   },
+// };
+
+// function makePizza(pizzaName) {
+//   return `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
+// }
+
+// // Колбэк для onError
+// function onOrderError(error) {
+//   return `Ошибка! ${error}`;
+// }
+// pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
+// console.log(pizzaPalace.order('Биг майк', makePizza, onOrderError));
+
+// function showThis() {
+//   console.log('вот такой:', this);
+// }
+
+// showThis();
+
+// const boy = { name: 'Bob' };
+
+// boy.method = showThis;
+// boy.method();
+
+const orders = [
+  { email: 'solomon@topmail.ua', dish: 'Burger' },
+  { email: 'artemis@coldmail.net', dish: 'Pizza' },
+  { email: 'jacob@mail.com', dish: 'Taco' },
+];
+
+function composeMessage(position) {
+  return `Готовим ${this.dish} для ${this.email}.Ваш заказ ${position} -й в очереди.`;
+}
+const messages = [];
+for (let i = 0; i < orders.length; i += 1) {
+  let result = composeMessage.call(orders[i], i + 1);
+  messages.push(result);
+  console.log(messages);
+}
