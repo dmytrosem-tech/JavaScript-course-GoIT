@@ -446,11 +446,11 @@ const users = [
 //   .sort((a, b) => a.author.localeCompare(b.author))
 //   .map(book => book.author);
 
-// 42 task
-const getNamesSortedByFriendCount = users =>
-  [...users]
-    .sort((a, b) => a.friends.length - b.friends.length)
-    .flatMap(user => user.name)
-    .filter((user, index, array) => array.indexOf(user) === index);
+// // 42 task
+// const getNamesSortedByFriendCount = users =>
+//   [...users]
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .flatMap(user => user.name)
+//     .filter((user, index, array) => array.indexOf(user) === index);
 
-console.log(getNamesSortedByFriendCount(users));
+// console.log(getNamesSortedByFriendCount(users));
