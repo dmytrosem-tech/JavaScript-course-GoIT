@@ -59,3 +59,123 @@
 // console.log(kidsNames);
 // const kidsAges = kids.map(kid => kid.age);
 // console.log(kidsAges);
+
+// ЗАДАЧА ВОВЫ ПРО УЧЕНЫХ------------------------------------------------------------------>
+// const scientists = [
+//     {
+//       name: 'Albert',
+//       surname: 'Einstein',
+//       born: 1879,
+//       dead: 1955,
+//       id: 1,
+//     },
+//     {
+//       name: 'Isaac',
+//       surname: 'Newton',
+//       born: 1643,
+//       dead: 1727,
+//       id: 2,
+//     },
+//     {
+//       name: 'Galileo',
+//       surname: 'Galilei',
+//       born: 1564,
+//       dead: 1642,
+//       id: 3,
+//     },
+//     {
+//       name: 'Marie',
+//       surname: 'Curie',
+//       born: 1867,
+//       dead: 1934,
+//       id: 4,
+//     },
+//     {
+//       name: 'Johannes',
+//       surname: 'Kepler',
+//       born: 1571,
+//       dead: 1630,
+//       id: 5,
+//     },
+//     {
+//       name: 'Nicolaus',
+//       surname: 'Copernicus',
+//       born: 1473,
+//       dead: 1543,
+//       id: 6,
+//     },
+//     {
+//       name: 'Max',
+//       surname: 'Planck',
+//       born: 1858,
+//       dead: 1947,
+//       id: 7,
+//     },
+//     {
+//       name: 'Katherine',
+//       surname: 'Blodgett',
+//       born: 1898,
+//       dead: 1979,
+//       id: 8,
+//     },
+
+//     {
+//       name: 'Lise',
+//       surname: 'Meitner',
+//       born: 1878,
+//       dead: 1968,
+//       id: 11,
+//     },
+//     {
+//       name: 'Sarah E.',
+//       surname: 'Goode',
+//       born: 1855,
+//       dead: 1905,
+//       id: 10,
+//     },
+//     {
+//       name: 'Hanna',
+//       surname: 'Hammarström',
+//       born: 1829,
+//       dead: 1909,
+//       id: 12,
+//     },
+//   {
+//     name: 'Ada',
+//     surname: 'Lovelace',
+//     born: 1760,
+//     dead: 1830,
+//     id: 9,
+//   },
+// ];
+
+// const checkPeriodOfWork = (dateOfPeriodStart, dateOfPeriodEnd) =>
+//   scientists.every(
+//     scientist =>
+//       (scientist.dead > dateOfPeriodStart && scientist.dead < dateOfPeriodEnd) ||
+//       (scientist.born > dateOfPeriodStart && scientist.born < dateOfPeriodEnd),
+//   );
+// // 19xx-------------------->
+// console.log(checkPeriodOfWork(1800, 1899));
+// 18xx-------------------->
+// console.log(checkPeriodOfWork(100, 2000));
+
+//   Найти год рождения Albert Einstein
+//   Узнать все ли ученые работали в 19 ст
+
+// const rez = scientists.find(el => {
+//   if (el.name === 'Albert') {
+//     return el.born;
+//   }
+// });
+
+// console.log(rez);
+
+// const findScientistBirthDate = (name, surname) =>
+//   scientists.find(
+//     scientist => scientist.name === name && scientist.surname === surname,
+//   ).born;
+
+// findScientistBirthDate('Albert', 'Einstein');
+// console.log(findScientistBirthDate('Albert', 'Einstein'));
+// console.log(findScientistBirthDate('Hanna', 'Hammarström'));
