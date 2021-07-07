@@ -180,52 +180,52 @@
 // console.log(findScientistBirthDate('Albert', 'Einstein'));
 // console.log(findScientistBirthDate('Hanna', 'Hammarström'));
 
-async function getData() {
-  let result = null;
-  let response = await fetch('https://restcountries.eu/rest/v2/all');
-  result = await response.json();
-  return result;
-}
+// async function getData() {
+//   let result = null;
+//   let response = await fetch('https://restcountries.eu/rest/v2/all');
+//   result = await response.json();
+//   return result;
+// }
 
-getData().then(data => localStorage.setItem('arr', JSON.stringify(data)));
+// getData().then(data => localStorage.setItem('arr', JSON.stringify(data)));
 
-const arr = JSON.parse(localStorage.getItem('arr'));
-console.log(arr);
+// const arr = JSON.parse(localStorage.getItem('arr'));
+// console.log(arr);
 
-// Получить стрыны из региона Europe
-// Получить название самой большой страни в Европе
-// Получить название самой маленькой страни в Европе
-// Получить список стран с которыми граничит Швейцария (Switzerland)
-// Получить процент который занимает  Австрия  в мире
+// // Получить стрыны из региона Europe
+// // Получить название самой большой страни в Европе
+// // Получить название самой маленькой страни в Европе
+// // Получить список стран с которыми граничит Швейцария (Switzerland)
+// // Получить процент который занимает  Австрия  в мире
 
-// const REGIONS = {
-//   EUROPE: 'Europe',
-//   ASIA: 'Asia',
+// // const REGIONS = {
+// //   EUROPE: 'Europe',
+// //   ASIA: 'Asia',
+// // };
+
+// const percentInWorld = (inn, array) => {
+//   const onePercentOfWorldArea =
+//     array.reduce((acc, country) => acc + country.area, 0) / 100;
+
+//   const percInTheWorld =
+//     array.find(country => country.name === inn).area / onePercentOfWorldArea;
+
+//   return percInTheWorld;
 // };
 
-const percentInWorld = (inn, array) => {
-  const onePercentOfWorldArea =
-    array.reduce((acc, country) => acc + country.area, 0) / 100;
+// const percentInWorldNew = (countryIn, array) =>
+//   (array.find(country => country.name === countryIn).area /
+//     array.reduce((acc, country) => acc + country.area, 0)) *
+//   100;
 
-  const percInTheWorld =
-    array.find(country => country.name === inn).area / onePercentOfWorldArea;
-
-  return percInTheWorld;
-};
-
-const percentInWorldNew = (countryIn, array) =>
-  (array.find(country => country.name === countryIn).area /
-    array.reduce((acc, country) => acc + country.area, 0)) *
-  100;
-
-console.log(
-  'Вариант с переменными и ретурном:',
-  percentInWorld('Austria', arr),
-);
-console.log(
-  'Вариант без переменных и ретурна:',
-  percentInWorldNew('Austria', arr),
-);
+// console.log(
+//   'Вариант с переменными и ретурном:',
+//   percentInWorld('Austria', arr),
+// );
+// console.log(
+//   'Вариант без переменных и ретурна:',
+//   percentInWorldNew('Austria', arr),
+// );
 
 // const findCountryByRegion = (countries, region) =>
 //   countries.filter(country => country.region === region);
@@ -271,3 +271,45 @@ console.log(
 // }
 
 // console.log(findBorders('Switzerland', arr));
+
+
+// var count = 0;
+// function cc(card) {
+//   // Only change code below this line
+// switch (card) {
+//   case 2:
+//   case 3:
+//   case 4:
+//   case 5:
+//   case 6:
+//   count++;
+//   break
+//   case 10:
+//   case 'J':
+//   case 'Q':
+//   case 'K':
+//   case 'A':
+//   count--;
+//   break;
+// }
+// var holdBet = 'Hold';
+// if(count > 0) {
+//   holdBet = 'Bet'
+// }
+//   return `${count} ${holdBet}`;
+//   // Only change code above this line
+// }
+// cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+function checkObj(obj, checkProp) {
+  // Only change code below this line
+  if (obj.hasOwnProperty(checkProp)) {
+    
+    return obj[checkProp];
+  } 
+    return 'Not Found';
+   
+  
+  // Only change code above this line
+}
+ console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "gift"));
