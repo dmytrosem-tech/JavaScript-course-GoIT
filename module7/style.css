@@ -1,0 +1,17 @@
+/* .hidden {
+    display: none;
+  } */
+
+  /* body {
+    padding: 1rem;
+  } */
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+    text-align: center;
+  }
