@@ -16,7 +16,7 @@
         <div id="inner-child">INNER-CHILD</div>
       </div>
     </div> -->
-    <ul class="nav js-nav">
+    <!-- <ul class="nav js-nav">
       <li><a href="#" class="btn">HTML</a></li>
       <li><a href="#" class="btn">CSS</a></li>
       <li><a href="#" class="btn">JavaScript</a></li>
@@ -26,7 +26,19 @@
       <li><a href="#" class="btn">React</a></li>
       <li><a href="#" class="btn">Redux</a></li>
       <li><a href="#" class="btn">NodeJS</a></li>
-    </ul>
+    </ul> -->
+    <div id="menu-container"></div>
+    <template id="menu-template">
+      <div class="menu">
+        <h3 class="menu-title">{{title}}</h3>
+        <ul class="menu-list">
+          {{#each items}}
+          <li class="menu-item">{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </template>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script src="./theory.js"></script>
   </body>
 </html>

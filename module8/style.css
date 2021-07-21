@@ -23,7 +23,7 @@
 } */
 
 /* ВЕШАЕМ СЛУШАТЕЛЯ ТОЛЬКО НА РОДИТЕЛЯ, ДЕТИ ПРИНИМАЮТ РОЛЬ ЦЕЛИ СОБЫТИЯ */
-body {
+/* body {
   font-family: Roboto, sans-serif;
 }
 
@@ -72,4 +72,4 @@ body {
 .btn.active {
   color: #fff;
   background-color: #2196f3;
-}
+} */
