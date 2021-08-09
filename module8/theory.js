@@ -42,35 +42,66 @@
 //   nextActiveLink.classList.add('active');
 // }
 
-const menuData = {
-  title: 'Eat it createElement, templates rule!',
-  items: ['Handlebars', 'LoDash', 'Pug', 'EJS', 'lit-html'],
-};
-const source = document.querySelector('#menu-template').innerHTML.trim();
+// const menuData = {
+//   title: 'Eat it createElement, templates rule!',
+//   items: ['Handlebars', 'LoDash', 'Pug', 'EJS', 'lit-html'],
+// };
+// const source = document.querySelector('#menu-template').innerHTML.trim();
 
-// В результате мы видим в консоли то,
-// как в переменную source записан обычный
-// форматированый текст.
-const template = Handlebars.compile(source);
+// // В результате мы видим в консоли то,
+// // как в переменную source записан обычный
+// // форматированый текст.
+// const template = Handlebars.compile(source);
 
-/*
-  Создадим переменную markup, в которую запишем 
-  результат работы функции-шаблона template
-*/
-const markup = template(menuData);
-console.log(markup);
+// /*
+//   Создадим переменную markup, в которую запишем
+//   результат работы функции-шаблона template
+// */
+// const markup = template(menuData);
+// console.log(markup);
 
-/*
-  Пример выше похож на операцию «поиск-и-замена»: шаблон просто 
-  заменил {{title}} на значение свойства menuData.title. 
-  После чего в результат попал сначала текст <ul>, 
-  потом выполнился {{#each items}}, который последовательно 
-  сгенерировал элементы списка, и затем список был закрыт </ul>.
-*/
+// /*
+//   Пример выше похож на операцию «поиск-и-замена»: шаблон просто
+//   заменил {{title}} на значение свойства menuData.title.
+//   После чего в результат попал сначала текст <ul>,
+//   потом выполнился {{#each items}}, который последовательно
+//   сгенерировал элементы списка, и затем список был закрыт </ul>.
+// */
 
-/*
-  В js выберем контейнер по id, после чего используя 
-  свойство innerHTML присвоим туда нашу строку.
-*/
-const container = document.querySelector('#menu-container');
-container.innerHTML = markup;
+// /*
+//   В js выберем контейнер по id, после чего используя
+//   свойство innerHTML присвоим туда нашу строку.
+// */
+// const container = document.querySelector('#menu-container');
+// container.innerHTML = markup;
+
+//  Работа с датой ------------------------------------------------------------------------>
+// const date = new Date();
+// console.log(date);
+// const date2 = new Date('april 7,2021');
+// console.log(date2);
+// const date3 = new Date(1983, 3, 7);
+// console.log(date3);
+// const date4 = new Date(10000007867834);
+// console.log(date4);
+// const date5 = Date.now();
+// console.log(date5);
+// const date6 = new Date();
+// console.log('date: ' + date6);
+// console.log('get date: ' + date6.getDate());
+// console.log('get day: ' + date6.getDay());
+// console.log('get Month: ' + date6.getMonth());
+// console.log('get full year: ' + date6.getFullYear());
+// const date = new Date();
+// console.log(`date from UNIX ${date.getTime()}`);
+// let result = 'Date: ';
+// result += date.getFullYear() + '/';
+// result += date.getMonth() + '/';
+// result += date.getDate() + '. Day of weak: ';
+// result += date.getDay() + '. ';
+// result += 'Time: ' + date.getHours() + ':';
+// result += date.getMinutes() + ':';
+// result += date.getSeconds() + ':';
+// result += date.getMilliseconds() + '';
+
+// console.log(result);
