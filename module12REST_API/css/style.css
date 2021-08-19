@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    grid-template-columns: 700px 700px 700px;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px ;
+}
+
+img {
+    display: block;
+    min-width: 100%;
+}
