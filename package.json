@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dmytrosem-tech/JavaScript-course-GoIT#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "joi": "^17.4.1"
   }
 }
