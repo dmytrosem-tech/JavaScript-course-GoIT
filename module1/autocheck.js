@@ -247,6 +247,10 @@
 
 // 36 задача
 
+// const checkForSpam = message =>
+//   message.toLowerCase().includes('spam') ||
+//   message.toLowerCase().includes('sale');
+
 // function checkForSpam(message) {
 //     let result;
 //     // Change code below this line
