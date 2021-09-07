@@ -96,5 +96,3 @@
 // console.log(secondInvoke);
 // // Почта poly@hotmail.de удалена из рассылки.
 // console.log(service.mailingList); // ['mango@mail.com', 'ajax@jmail.net', 'kiwi@mail.uk']
-
-
